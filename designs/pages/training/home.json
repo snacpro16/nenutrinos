@@ -1,0 +1,185 @@
+[
+    {
+        "id": "sd_emtflJ50diIuYlNe",
+        "type": "tab",
+        "createdDate": "2022-04-25T07:45:45.105Z",
+        "label": "home",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "homeComponent"
+    },
+    {
+        "id": "sd_TuExa7TqBe4IxEhh",
+        "type": "OnInit",
+        "z": "sd_emtflJ50diIuYlNe",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_TuExa7TqBe4IxEhh",
+        "category": "Lifecycle Events",
+        "x": 105,
+        "y": 80,
+        "wires": [
+            [
+                "sd_n2VUnpotNP2qLcAl"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "homeComponent"
+    },
+    {
+        "id": "sd_n2VUnpotNP2qLcAl",
+        "type": "PageVariables",
+        "z": "sd_emtflJ50diIuYlNe",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [],
+        "functionName": "sd_n2VUnpotNP2qLcAl",
+        "category": "Function",
+        "x": 245,
+        "y": 80,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true,
+        "serviceName": "homeComponent"
+    },
+    {
+        "id": "sd_WmbZd8c3DxbhiNpT",
+        "type": "PageStart",
+        "z": "sd_emtflJ50diIuYlNe",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "openAlert",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "openAlert",
+        "category": "General",
+        "x": 100,
+        "y": 160,
+        "wires": [
+            [
+                "sd_F5oeQIPIOGpZabjD"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "homeComponent"
+    },
+    {
+        "id": "sd_F5oeQIPIOGpZabjD",
+        "type": "Script",
+        "z": "sd_emtflJ50diIuYlNe",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "show the alert box",
+        "script": "alert(\"Hello World!!!!\")",
+        "functionName": "showTheAlertBox",
+        "category": "Function",
+        "x": 245,
+        "y": 160,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_tqHg3tZAEYkl7Tp1",
+        "type": "PageStart",
+        "z": "sd_emtflJ50diIuYlNe",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "Create Page",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "createPage",
+        "category": "General",
+        "x": 100,
+        "y": 340,
+        "wires": [
+            [
+                "sd_NXVJnQpSDdsrN9tv"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "homeComponent"
+    },
+    {
+        "id": "sd_uMU15MOzKrJOhCaS",
+        "type": "PageStart",
+        "z": "sd_emtflJ50diIuYlNe",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "List Page",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "listPage",
+        "category": "General",
+        "x": 100,
+        "y": 260,
+        "wires": [
+            [
+                "sd_Dhnk8NRSkBKFuVk3"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "homeComponent"
+    },
+    {
+        "id": "sd_Dhnk8NRSkBKFuVk3",
+        "type": "Navigation",
+        "z": "sd_emtflJ50diIuYlNe",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/home/list",
+        "functionName": "sd_Dhnk8NRSkBKFuVk3",
+        "category": "Navigation",
+        "x": 245,
+        "y": 260,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_NXVJnQpSDdsrN9tv",
+        "type": "Navigation",
+        "z": "sd_emtflJ50diIuYlNe",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/home/create",
+        "functionName": "sd_NXVJnQpSDdsrN9tv",
+        "category": "Navigation",
+        "x": 245,
+        "y": 340,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    }
+]

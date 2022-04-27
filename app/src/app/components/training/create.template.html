@@ -1,0 +1,21 @@
+<form [formGroup]="page.blogForm">
+  <div fxLayout="row wrap" class="mt-2" fxFlex="100" fxLayoutAlign="center stretch" [fxShow]="true">
+    <div fxLayout="column wrap" class="card-r page-sapce mat-elevation-z2" fxFlex="50" fxLayoutGap="10" fxLayoutAlign="start stretch" [fxShow]="true">
+      <h2>
+        Add New Blog</h2>
+      <mat-form-field color="primary" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+        <input matInput name="title" placeholder="Title" [required]="true" formControlName="title">
+        <mat-label>Title</mat-label>
+        <mat-icon matSuffix>blog</mat-icon>
+      </mat-form-field>
+      <mat-form-field color="primary" [appearance]="&apos;outline&apos;">
+        <textarea matInput formControlName="description" name="description" placeholder="Text Area" [required]="true"></textarea>
+      </mat-form-field>
+      <mat-form-field color="primary" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+        <input matInput name="image" type="url" placeholder="Image" [required]="true" formControlName="image" [disabled]="false">
+        <mat-label>Image URL</mat-label>
+      </mat-form-field>
+      <div fxLayout="row wrap" fxLayoutAlign="space-between stretch" [fxShow]="true"><button mat-button color="primary" (click)="printInputOnBlur()" type="Submit">Submit</button><button mat-button color="warn" [disableRipple]="false" type="button">Cancel</button></div>
+    </div>
+  </div>
+</form>

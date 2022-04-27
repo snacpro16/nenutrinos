@@ -1,0 +1,290 @@
+[
+    {
+        "id": "sd_XZ6kmAgUvqu84j6a",
+        "type": "tab",
+        "createdDate": "2022-04-26T10:26:08.613Z",
+        "label": "create",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "createComponent"
+    },
+    {
+        "id": "sd_4czr6TFQ9XoGbKsN",
+        "type": "OnInit",
+        "z": "sd_XZ6kmAgUvqu84j6a",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_4czr6TFQ9XoGbKsN",
+        "category": "Lifecycle Events",
+        "x": 85,
+        "y": 40,
+        "wires": [
+            [
+                "sd_6xjMDCJjpCsnRMUW"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "createComponent",
+        "generated": false
+    },
+    {
+        "id": "sd_6xjMDCJjpCsnRMUW",
+        "type": "PageVariables",
+        "z": "sd_XZ6kmAgUvqu84j6a",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [],
+        "functionName": "sd_6xjMDCJjpCsnRMUW",
+        "category": "Function",
+        "x": 245,
+        "y": 40,
+        "wires": [
+            [
+                "sd_urDKA25leer1zFxh"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true,
+        "serviceName": "createComponent"
+    },
+    {
+        "id": "sd_weuu4ZexjEZcLSig",
+        "type": "PageStart",
+        "z": "sd_XZ6kmAgUvqu84j6a",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "printInputOnBlur",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "printInputOnBlur",
+        "category": "General",
+        "x": 85,
+        "y": 140,
+        "wires": [
+            [
+                "sd_jLVc65wT1LZrPRQ0"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "createComponent",
+        "generated": false
+    },
+    {
+        "id": "sd_HGdsvjrOqi98AoWw",
+        "type": "PageStart",
+        "z": "sd_XZ6kmAgUvqu84j6a",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "initForGroup",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "initForGroup",
+        "category": "General",
+        "x": 85,
+        "y": 240,
+        "wires": [
+            [
+                "sd_XJKoXe3ZuZE95eZB"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "createComponent",
+        "generated": false
+    },
+    {
+        "id": "sd_urDKA25leer1zFxh",
+        "type": "PageCallService",
+        "z": "sd_XZ6kmAgUvqu84j6a",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_XZ6kmAgUvqu84j6a",
+            "type": "tab",
+            "createdDate": "2022-04-26T10:26:08.613Z",
+            "label": "create",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0
+        },
+        "flow": {
+            "flowId": "sd_HGdsvjrOqi98AoWw",
+            "flowName": "initForGroup"
+        },
+        "inputVariables": [],
+        "outputMapping": [],
+        "serviceImportPath": "./create",
+        "startName": "initForGroup",
+        "inputParams": [],
+        "accept_csd": false,
+        "functionName": "sd_urDKA25leer1zFxh",
+        "category": "General",
+        "x": 405,
+        "y": 40,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_rRCrQldEbHVus3lP",
+        "type": "Script",
+        "z": "sd_XZ6kmAgUvqu84j6a",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.blogForm = new page.formGroup({\n    \"title\": new page.formControl(\"\"),\n    \"description\": new page.formControl(\"\"),\n    \"image\": new page.formControl(\"\")\n})",
+        "functionName": "sd_rRCrQldEbHVus3lP",
+        "category": "Function",
+        "x": 385,
+        "y": 240,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_XJKoXe3ZuZE95eZB",
+        "type": "UseDependency",
+        "z": "sd_XZ6kmAgUvqu84j6a",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "FormGroup",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "formGroup"
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "FormControl",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "formControl"
+                },
+                "injectable": false
+            }
+        ],
+        "import_all": false,
+        "library": "@angular/forms",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_XJKoXe3ZuZE95eZB",
+        "category": "Function",
+        "x": 245,
+        "y": 240,
+        "wires": [
+            [
+                "sd_rRCrQldEbHVus3lP"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_5qx1iOk15Y01zwQN",
+        "type": "Log",
+        "z": "sd_XZ6kmAgUvqu84j6a",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 0,
+        "logObject": "this.page.blogForm.value",
+        "functionName": "sd_5qx1iOk15Y01zwQN",
+        "category": "General",
+        "x": 405,
+        "y": 140,
+        "wires": [],
+        "__ssdTypeInputs__": {
+            "logObject": {
+                "type": "this.page",
+                "value": "blogForm.value",
+                "constant": false
+            }
+        },
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "generated": false
+    },
+    {
+        "id": "sd_jLVc65wT1LZrPRQ0",
+        "type": "PageCallService",
+        "z": "sd_XZ6kmAgUvqu84j6a",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "call add blog service",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_KZpYI6SZaXsr6sqL",
+            "type": "tab",
+            "createdDate": "2022-04-26T13:20:01.103Z",
+            "label": "addBlogservice",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0
+        },
+        "flow": {
+            "flowId": "sd_yQnEdid8SIS2CnEK",
+            "flowName": "addBlog"
+        },
+        "inputVariables": [
+            {
+                "key": "blog",
+                "map": true,
+                "valueType": "this.page",
+                "value": "blogForm.value"
+            }
+        ],
+        "outputMapping": [],
+        "serviceImportPath": "app/sd-services/addBlogservice",
+        "startName": "addBlog",
+        "inputParams": [
+            "this.page.blogForm.value"
+        ],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "callAddBlogService",
+        "category": "General",
+        "x": 245,
+        "y": 140,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generated": true,
+        "generateNext": false
+    }
+]

@@ -1,0 +1,13 @@
+{
+    "displayName": "NeutrinosTraining",
+    "appName": "neutrinostraining",
+    "description": "For training on platform",
+    "lastModified": "2022-04-25T07:18:40.549Z",
+    "imgSourcePath": "appIcon-1650871119876.svg",
+    "version": "1.0.0",
+    "appType": "uiOnly",
+    "templateName": "blank",
+    "createDate": "2022-04-25T07:18:39.875Z",
+    "analyticsId": "a9e68c1b-bea5-27c4-55f4-338ec98c6110",
+    "createdStudioVersion": "8.1.1"
+}

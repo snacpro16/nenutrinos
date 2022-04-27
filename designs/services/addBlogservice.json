@@ -1,0 +1,166 @@
+[
+    {
+        "id": "sd_KZpYI6SZaXsr6sqL",
+        "type": "tab",
+        "createdDate": "2022-04-26T13:20:01.103Z",
+        "label": "addBlogservice",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "addBlogservice",
+        "relativeParentPath": ""
+    },
+    {
+        "id": "sd_z7I2QQQlyeT9BK3j",
+        "type": "Environment",
+        "z": "sd_KZpYI6SZaXsr6sqL",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "envMaps": [
+            {
+                "flowVar": {
+                    "type": "bh.local",
+                    "value": "blogUrl"
+                },
+                "envProperty": "ssdURL"
+            }
+        ],
+        "functionName": "sd_z7I2QQQlyeT9BK3j",
+        "category": "General",
+        "x": 245,
+        "y": 100,
+        "wires": [
+            [
+                "sd_TuddcTfFmsyrIg1u"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_yQnEdid8SIS2CnEK",
+        "type": "Start",
+        "z": "sd_KZpYI6SZaXsr6sqL",
+        "viewType": "client-server",
+        "nodeType": "start",
+        "name": "Add Blog",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "blog",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "accept_bh": false,
+        "functionName": "addBlog",
+        "category": "General",
+        "x": 125,
+        "y": 100,
+        "wires": [
+            [
+                "sd_z7I2QQQlyeT9BK3j"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "addBlogservice"
+    },
+    {
+        "id": "sd_TuddcTfFmsyrIg1u",
+        "type": "Script",
+        "z": "sd_KZpYI6SZaXsr6sqL",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.local.blogUrl +=\"blogs\";\nconsole.log(\"output\",bh.input.blog)",
+        "functionName": "sd_TuddcTfFmsyrIg1u",
+        "category": "Function",
+        "x": 365,
+        "y": 100,
+        "wires": [
+            [
+                "sd_F4wvz9jM7izEWaMB"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_F4wvz9jM7izEWaMB",
+        "type": "HttpRequest",
+        "z": "sd_KZpYI6SZaXsr6sqL",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "Add blog API",
+        "method": "post",
+        "methodMappingObj": {},
+        "urlMapping": "bh.local.blogUrl",
+        "urlMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "blogUrl"
+        },
+        "ret": "json",
+        "retMappingObj": {},
+        "observe": "",
+        "observeMappingObj": {},
+        "reportProgress": false,
+        "withCreds": false,
+        "reqBody": "bh.input.blog",
+        "reqBodyObj": {
+            "mapVarType": "bh.input",
+            "mapVarValue": "blog"
+        },
+        "resultMapping": "bh.local.blog",
+        "resultMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "blog"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMappingObj": {},
+        "functionName": "addBlogAPI",
+        "category": "HTTP",
+        "x": 505,
+        "y": 100,
+        "wires": [
+            [
+                "sd_xzaLvCrwe3DpeXbc"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_xzaLvCrwe3DpeXbc",
+        "type": "Navigation",
+        "z": "sd_KZpYI6SZaXsr6sqL",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/home/list",
+        "functionName": "sd_xzaLvCrwe3DpeXbc",
+        "category": "Navigation",
+        "x": 640,
+        "y": 100,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    }
+]

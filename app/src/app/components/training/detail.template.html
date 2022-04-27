@@ -1,0 +1,9 @@
+<div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+  <mat-card (click)="navigateToDetailPage(blog)" style="margin:15px;">
+    <mat-card-header>
+      <mat-card-title>{{page.blog.id}} {{page.blog.title}} </mat-card-title>
+      <mat-card-subtitle>{{page.blog.description}}</mat-card-subtitle>
+      <img mat-card-avatar artImgSrc [src]="page.blog.image">
+    </mat-card-header>
+  </mat-card>
+</div>
