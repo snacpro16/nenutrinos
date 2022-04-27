@@ -1,5 +1,5 @@
 {
-    "a1fdf465-26dc-f015-9d97-1a49404230f0": {
+    "245dba06-9485-1f54-3cdf-55d93b26a1b1": {
         "paletteKey": "FlexLayoutRow",
         "commentid": null,
         "designerReference": [
@@ -59,9 +59,9 @@
                 "_attrDef": "p"
             }
         ],
-        "7bcff28f-5793-403d-2f14-5bf3f3fdcf59": {
+        "eda7b4e8-cc68-abd2-7981-eb84d19f8f1f": {
             "paletteKey": "FlexLayoutCol",
-            "parentEditorKey": "a1fdf465-26dc-f015-9d97-1a49404230f0",
+            "parentEditorKey": "245dba06-9485-1f54-3cdf-55d93b26a1b1",
             "commentid": null,
             "designerReference": [
                 {
@@ -73,13 +73,15 @@
                 },
                 {
                     "_key": "style",
-                    "_value": "margin:10px;",
+                    "_value": "",
                     "_type": "kv",
                     "_attrDef": "p"
                 },
                 {
                     "_key": "class",
-                    "_value": "",
+                    "_value": [
+                        "center"
+                    ],
                     "_type": "dav",
                     "_attrDef": "p"
                 },
@@ -103,13 +105,13 @@
                 },
                 {
                     "_key": "layoutAlign",
-                    "_value": "end",
+                    "_value": "start",
                     "_type": "a",
                     "_attrDef": "p"
                 },
                 {
                     "_key": "pLayoutAlign",
-                    "_value": "end",
+                    "_value": "stretch",
                     "_type": "a",
                     "_attrDef": "p"
                 },
@@ -118,16 +120,29 @@
                     "_value": "true",
                     "_type": "kv",
                     "_attrDef": "p"
+                },
+                {
+                    "_key": "*ngIf",
+                    "_value": "!page?.users",
+                    "_type": "kv",
+                    "_attrDef": "c"
                 }
             ],
-            "60ef9e5c-86fa-5afa-ca1a-4bae3e36b077": {
-                "paletteKey": "NG-button",
-                "parentEditorKey": "7bcff28f-5793-403d-2f14-5bf3f3fdcf59",
+            "669bad63-9103-a8eb-d013-56085c44b31d": {
+                "paletteKey": "FlexLayoutRow",
+                "parentEditorKey": "eda7b4e8-cc68-abd2-7981-eb84d19f8f1f",
                 "commentid": null,
                 "designerReference": [
                     {
+                        "_key": "componentLabel",
+                        "_value": "Row",
+                        "_type": "kv",
+                        "_attrDef": "p",
+                        "_useAsLabel": true
+                    },
+                    {
                         "_key": "style",
-                        "_value": "width: 120px; margin:10px;font-size:20px",
+                        "_value": "",
                         "_type": "kv",
                         "_attrDef": "p"
                     },
@@ -138,54 +153,106 @@
                         "_attrDef": "p"
                     },
                     {
-                        "_key": "buttonname",
-                        "_value": "Add User",
+                        "_key": "fxFlex",
+                        "_value": "100",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "fxLayoutGap",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "wrap",
+                        "_value": "wrap",
                         "_type": "a",
-                        "_attrDef": "p",
-                        "_useAsLabel": true
-                    },
-                    {
-                        "_key": "color",
-                        "_value": "",
-                        "_type": "kv",
                         "_attrDef": "p"
                     },
                     {
-                        "_key": "(click)",
-                        "_value": "",
-                        "_type": "kv",
+                        "_key": "layoutAlign",
+                        "_value": "center",
+                        "_type": "a",
                         "_attrDef": "p"
                     },
                     {
-                        "_key": "[disabled]",
-                        "_value": "",
-                        "_type": "kv",
+                        "_key": "pLayoutAlign",
+                        "_value": "center",
+                        "_type": "a",
                         "_attrDef": "p"
                     },
                     {
-                        "_key": "[disableRipple]",
-                        "_value": "",
-                        "_type": "kv",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "type",
-                        "_value": "",
-                        "_type": "kv",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "routerLink",
-                        "_value": "",
+                        "_key": "[fxShow]",
+                        "_value": "true",
                         "_type": "kv",
                         "_attrDef": "p"
                     }
-                ]
+                ],
+                "36e3297f-dcea-6500-fca2-7470290d369f": {
+                    "paletteKey": "NG-ProgressSpinner",
+                    "parentEditorKey": "669bad63-9103-a8eb-d013-56085c44b31d",
+                    "commentid": null,
+                    "designerReference": [
+                        {
+                            "_key": "style",
+                            "_value": "",
+                            "_type": "kv",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "class",
+                            "_value": [
+                                "mat-progress-spinner",
+                                "layout"
+                            ],
+                            "_type": "dav",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "componentLabel",
+                            "_value": "Progress Spinner",
+                            "_type": "kv",
+                            "_attrDef": "p",
+                            "_useAsLabel": true
+                        },
+                        {
+                            "_key": "[progressSpinnerMode]",
+                            "_value": "'indeterminate'",
+                            "_type": "a",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "strokeWidth",
+                            "_value": "",
+                            "_type": "kv",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "[value]",
+                            "_value": "",
+                            "_type": "kv",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "color",
+                            "_value": "primary",
+                            "_type": "kv",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "[diameter]",
+                            "_value": "",
+                            "_type": "kv",
+                            "_attrDef": "p"
+                        }
+                    ]
+                }
             }
         },
-        "95d36e1c-f754-d770-9686-0275e7c938bf": {
+        "f03cf2c4-fab5-d324-bb66-06955ee026ce": {
             "paletteKey": "FlexLayoutCol",
-            "parentEditorKey": "a1fdf465-26dc-f015-9d97-1a49404230f0",
+            "parentEditorKey": "245dba06-9485-1f54-3cdf-55d93b26a1b1",
             "commentid": null,
             "designerReference": [
                 {
@@ -244,9 +311,9 @@
                     "_attrDef": "p"
                 }
             ],
-            "080f00b5-57de-9e17-38a9-bba9fcce10eb": {
+            "a1fdf465-26dc-f015-9d97-1a49404230f0": {
                 "paletteKey": "FlexLayoutRow",
-                "parentEditorKey": "95d36e1c-f754-d770-9686-0275e7c938bf",
+                "parentEditorKey": "f03cf2c4-fab5-d324-bb66-06955ee026ce",
                 "commentid": null,
                 "designerReference": [
                     {
@@ -270,7 +337,7 @@
                     },
                     {
                         "_key": "fxFlex",
-                        "_value": "",
+                        "_value": "100",
                         "_type": "kv",
                         "_attrDef": "p"
                     },
@@ -305,9 +372,9 @@
                         "_attrDef": "p"
                     }
                 ],
-                "3b379875-ca0c-b5d4-21d8-1273c99ae345": {
+                "7bcff28f-5793-403d-2f14-5bf3f3fdcf59": {
                     "paletteKey": "FlexLayoutCol",
-                    "parentEditorKey": "080f00b5-57de-9e17-38a9-bba9fcce10eb",
+                    "parentEditorKey": "a1fdf465-26dc-f015-9d97-1a49404230f0",
                     "commentid": null,
                     "designerReference": [
                         {
@@ -319,7 +386,7 @@
                         },
                         {
                             "_key": "style",
-                            "_value": "",
+                            "_value": "margin:10px;",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
@@ -331,7 +398,7 @@
                         },
                         {
                             "_key": "fxFlex",
-                            "_value": "",
+                            "_value": "100",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
@@ -349,13 +416,13 @@
                         },
                         {
                             "_key": "layoutAlign",
-                            "_value": "start",
+                            "_value": "end",
                             "_type": "a",
                             "_attrDef": "p"
                         },
                         {
                             "_key": "pLayoutAlign",
-                            "_value": "stretch",
+                            "_value": "end",
                             "_type": "a",
                             "_attrDef": "p"
                         },
@@ -365,11 +432,218 @@
                             "_type": "kv",
                             "_attrDef": "p"
                         }
-                    ]
+                    ],
+                    "da42b645-cbc2-802a-a5be-e3852f78044b": {
+                        "paletteKey": "NG-button",
+                        "parentEditorKey": "7bcff28f-5793-403d-2f14-5bf3f3fdcf59",
+                        "commentid": null,
+                        "designerReference": [
+                            {
+                                "_key": "style",
+                                "_value": "width: 120px; margin:10px;font-size:20px",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "class",
+                                "_value": "",
+                                "_type": "dav",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "buttonname",
+                                "_value": "Add User",
+                                "_type": "a",
+                                "_attrDef": "p",
+                                "_useAsLabel": true
+                            },
+                            {
+                                "_key": "color",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "(click)",
+                                "_value": "addUserNavigate()",
+                                "_type": "kv",
+                                "_attrDef": "p",
+                                "objValue": {
+                                    "nodeID": "sd_1bK6TThMHAizDsOM",
+                                    "functionName": "addUserNavigate",
+                                    "activeTree": "pages",
+                                    "z": "sd_2juzzECcG35Oye3E",
+                                    "input": []
+                                }
+                            },
+                            {
+                                "_key": "[disabled]",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "[disableRipple]",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "type",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "routerLink",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            }
+                        ]
+                    },
+                    "7d2dbf9f-31be-f043-bcde-de13e17b76a3": {
+                        "paletteKey": "NG-button",
+                        "parentEditorKey": "7bcff28f-5793-403d-2f14-5bf3f3fdcf59",
+                        "commentid": null,
+                        "designerReference": [
+                            {
+                                "_key": "style",
+                                "_value": "width: 120px; margin:10px;font-size:20px",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "class",
+                                "_value": "",
+                                "_type": "dav",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "buttonname",
+                                "_value": "Edit User",
+                                "_type": "a",
+                                "_attrDef": "p",
+                                "_useAsLabel": true
+                            },
+                            {
+                                "_key": "color",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "(click)",
+                                "_value": "editUserNavigate()",
+                                "_type": "kv",
+                                "_attrDef": "p",
+                                "objValue": {
+                                    "nodeID": "sd_jhzxlVcDo3UJ3Hi1",
+                                    "functionName": "editUserNavigate",
+                                    "activeTree": "pages",
+                                    "z": "sd_2juzzECcG35Oye3E",
+                                    "input": []
+                                }
+                            },
+                            {
+                                "_key": "[disabled]",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "[disableRipple]",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "type",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "routerLink",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            }
+                        ]
+                    },
+                    "60ef9e5c-86fa-5afa-ca1a-4bae3e36b077": {
+                        "paletteKey": "NG-button",
+                        "parentEditorKey": "7bcff28f-5793-403d-2f14-5bf3f3fdcf59",
+                        "commentid": null,
+                        "designerReference": [
+                            {
+                                "_key": "style",
+                                "_value": "width: 120px; margin:10px;font-size:20px",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "class",
+                                "_value": "",
+                                "_type": "dav",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "buttonname",
+                                "_value": "View User",
+                                "_type": "a",
+                                "_attrDef": "p",
+                                "_useAsLabel": true
+                            },
+                            {
+                                "_key": "color",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "(click)",
+                                "_value": "userDetailNavigate()",
+                                "_type": "kv",
+                                "_attrDef": "p",
+                                "objValue": {
+                                    "nodeID": "sd_MtD2eMnhv0nLTPxT",
+                                    "functionName": "userDetailNavigate",
+                                    "activeTree": "pages",
+                                    "z": "sd_2juzzECcG35Oye3E",
+                                    "input": []
+                                }
+                            },
+                            {
+                                "_key": "[disabled]",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "[disableRipple]",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "type",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "routerLink",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            }
+                        ]
+                    }
                 },
-                "734eadc5-2663-069b-756e-2c312cce89f5": {
+                "95d36e1c-f754-d770-9686-0275e7c938bf": {
                     "paletteKey": "FlexLayoutCol",
-                    "parentEditorKey": "080f00b5-57de-9e17-38a9-bba9fcce10eb",
+                    "parentEditorKey": "a1fdf465-26dc-f015-9d97-1a49404230f0",
                     "commentid": null,
                     "designerReference": [
                         {
@@ -393,7 +667,7 @@
                         },
                         {
                             "_key": "fxFlex",
-                            "_value": "",
+                            "_value": "100",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
@@ -427,131 +701,238 @@
                             "_type": "kv",
                             "_attrDef": "p"
                         }
-                    ]
-                },
-                "33d2922d-2296-2f6b-dfc6-6d179a7693ae": {
-                    "paletteKey": "FlexLayoutCol",
-                    "parentEditorKey": "080f00b5-57de-9e17-38a9-bba9fcce10eb",
-                    "commentid": null,
-                    "designerReference": [
-                        {
-                            "_key": "componentLabel",
-                            "_value": "Column",
-                            "_type": "kv",
-                            "_attrDef": "p",
-                            "_useAsLabel": true
+                    ],
+                    "239c6648-a14d-a9b6-2829-4afae9ea04f1": {
+                        "paletteKey": "ng-table",
+                        "parentEditorKey": "95d36e1c-f754-d770-9686-0275e7c938bf",
+                        "isAdvancedComponent": true,
+                        "commentid": null,
+                        "designerReference": [
+                            {
+                                "_key": "componentLabel",
+                                "_value": "Table",
+                                "_type": "kv",
+                                "_attrDef": "p",
+                                "_useAsLabel": true
+                            },
+                            {
+                                "_key": "style",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "class",
+                                "_value": "",
+                                "_type": "dav",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "[dataSource]",
+                                "_value": "page.users.data",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "(rowclick)",
+                                "_value": "",
+                                "_type": "a",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "header",
+                                "_value": true,
+                                "_type": "a",
+                                "_attrDef": "p",
+                                "_visibility": true
+                            }
+                        ],
+                        "d94fbd82-a9f3-ade3-d72d-98fc01a00fb3": {
+                            "paletteKey": "ng-table-column",
+                            "parentEditorKey": "239c6648-a14d-a9b6-2829-4afae9ea04f1",
+                            "isAdvancedChildComponent": true,
+                            "commentid": null,
+                            "designerReference": [
+                                {
+                                    "_key": "Header Label",
+                                    "_value": "Name",
+                                    "_type": "a",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "matSortHeaderColumn",
+                                    "_value": "mat-sort-header",
+                                    "_type": "a",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "Mapping",
+                                    "_value": "{{table.name}}",
+                                    "_type": "ma",
+                                    "_attrDef": "p",
+                                    "_useAsLabel": true
+                                },
+                                {
+                                    "_key": "columnName",
+                                    "_value": "",
+                                    "_type": "dav",
+                                    "_attrDef": "p",
+                                    "_visibility": false
+                                },
+                                {
+                                    "_key": "headerclass",
+                                    "_value": "",
+                                    "_type": "dav",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "columnclass",
+                                    "_value": "",
+                                    "_type": "dav",
+                                    "_attrDef": "p"
+                                }
+                            ]
                         },
-                        {
-                            "_key": "style",
-                            "_value": "",
-                            "_type": "kv",
-                            "_attrDef": "p"
+                        "53280776-39a8-564b-7420-41ee418ec020": {
+                            "paletteKey": "ng-table-column",
+                            "parentEditorKey": "239c6648-a14d-a9b6-2829-4afae9ea04f1",
+                            "isAdvancedChildComponent": true,
+                            "commentid": null,
+                            "designerReference": [
+                                {
+                                    "_key": "Header Label",
+                                    "_value": "Email",
+                                    "_type": "a",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "matSortHeaderColumn",
+                                    "_value": "mat-sort-header",
+                                    "_type": "a",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "Mapping",
+                                    "_value": "{{table.email}}",
+                                    "_type": "ma",
+                                    "_attrDef": "p",
+                                    "_useAsLabel": true
+                                },
+                                {
+                                    "_key": "columnName",
+                                    "_value": "",
+                                    "_type": "dav",
+                                    "_attrDef": "p",
+                                    "_visibility": false
+                                },
+                                {
+                                    "_key": "headerclass",
+                                    "_value": "",
+                                    "_type": "dav",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "columnclass",
+                                    "_value": "",
+                                    "_type": "dav",
+                                    "_attrDef": "p"
+                                }
+                            ]
                         },
-                        {
-                            "_key": "class",
-                            "_value": "",
-                            "_type": "dav",
-                            "_attrDef": "p"
+                        "ea05886a-6574-cff3-4eea-63e94b77b02c": {
+                            "paletteKey": "ng-table-column",
+                            "parentEditorKey": "239c6648-a14d-a9b6-2829-4afae9ea04f1",
+                            "isAdvancedChildComponent": true,
+                            "commentid": null,
+                            "designerReference": [
+                                {
+                                    "_key": "Header Label",
+                                    "_value": "Phone Number",
+                                    "_type": "a",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "matSortHeaderColumn",
+                                    "_value": "mat-sort-header",
+                                    "_type": "a",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "Mapping",
+                                    "_value": "{{table.phonenumber}}",
+                                    "_type": "ma",
+                                    "_attrDef": "p",
+                                    "_useAsLabel": true
+                                },
+                                {
+                                    "_key": "columnName",
+                                    "_value": "",
+                                    "_type": "dav",
+                                    "_attrDef": "p",
+                                    "_visibility": false
+                                },
+                                {
+                                    "_key": "headerclass",
+                                    "_value": "",
+                                    "_type": "dav",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "columnclass",
+                                    "_value": "",
+                                    "_type": "dav",
+                                    "_attrDef": "p"
+                                }
+                            ]
                         },
-                        {
-                            "_key": "fxFlex",
-                            "_value": "",
-                            "_type": "kv",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "fxLayoutGap",
-                            "_value": "",
-                            "_type": "kv",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "wrap",
-                            "_value": "wrap",
-                            "_type": "a",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "layoutAlign",
-                            "_value": "start",
-                            "_type": "a",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "pLayoutAlign",
-                            "_value": "stretch",
-                            "_type": "a",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "[fxShow]",
-                            "_value": "true",
-                            "_type": "kv",
-                            "_attrDef": "p"
+                        "9a8ecd16-4dda-8c56-3536-2e3c21a01b76": {
+                            "paletteKey": "ng-table-column",
+                            "parentEditorKey": "239c6648-a14d-a9b6-2829-4afae9ea04f1",
+                            "isAdvancedChildComponent": true,
+                            "isCommented": "false",
+                            "commentid": null,
+                            "designerReference": [
+                                {
+                                    "_key": "Header Label",
+                                    "_value": "Action",
+                                    "_type": "a",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "matSortHeaderColumn",
+                                    "_value": "",
+                                    "_type": "a",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "Mapping",
+                                    "_value": "",
+                                    "_type": "ma",
+                                    "_attrDef": "p",
+                                    "_useAsLabel": true
+                                },
+                                {
+                                    "_key": "columnName",
+                                    "_value": "",
+                                    "_type": "dav",
+                                    "_attrDef": "p",
+                                    "_visibility": false
+                                },
+                                {
+                                    "_key": "headerclass",
+                                    "_value": "",
+                                    "_type": "dav",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "columnclass",
+                                    "_value": "",
+                                    "_type": "dav",
+                                    "_attrDef": "p"
+                                }
+                            ]
                         }
-                    ]
-                },
-                "a4c8c73d-3aaa-ac36-2d40-3cc168824d13": {
-                    "paletteKey": "FlexLayoutCol",
-                    "parentEditorKey": "080f00b5-57de-9e17-38a9-bba9fcce10eb",
-                    "commentid": null,
-                    "designerReference": [
-                        {
-                            "_key": "componentLabel",
-                            "_value": "Column",
-                            "_type": "kv",
-                            "_attrDef": "p",
-                            "_useAsLabel": true
-                        },
-                        {
-                            "_key": "style",
-                            "_value": "",
-                            "_type": "kv",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "class",
-                            "_value": "",
-                            "_type": "dav",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "fxFlex",
-                            "_value": "",
-                            "_type": "kv",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "fxLayoutGap",
-                            "_value": "",
-                            "_type": "kv",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "wrap",
-                            "_value": "wrap",
-                            "_type": "a",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "layoutAlign",
-                            "_value": "start",
-                            "_type": "a",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "pLayoutAlign",
-                            "_value": "stretch",
-                            "_type": "a",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "[fxShow]",
-                            "_value": "true",
-                            "_type": "kv",
-                            "_attrDef": "p"
-                        }
-                    ]
+                    }
                 }
             }
         }

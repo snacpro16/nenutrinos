@@ -7,7 +7,7 @@
                 {
                     "path": "list",
                     "component": "listComponent",
-                    "canActivate": "NeutrinosAuthGuardService"
+                    "canActivate": ""
                 },
                 {
                     "path": "detail/:id",
@@ -19,7 +19,7 @@
                 },
                 {
                     "path": "users",
-                    "component": "UserListComponent",
+                    "component": "UserRouterComponent",
                     "children": [
                         {
                             "path": "create",
@@ -28,10 +28,20 @@
                         {
                             "path": ":id",
                             "component": "UserDetailComponent"
+                        },
+                        {
+                            "path": "edit/:id",
+                            "component": "UserEditComponent"
+                        },
+                        {
+                            "path": "list",
+                            "component": "UserListComponent"
                         }
-                    ]
+                    ],
+                    "redirectTo": ""
                 }
-            ]
+            ],
+            "canActivate": "NeutrinosAuthGuardService"
         },
         {
             "path": "''",

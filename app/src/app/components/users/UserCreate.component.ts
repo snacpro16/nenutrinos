@@ -12,7 +12,13 @@ import {
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { __NEU_ServiceInvokerService__ } from 'app/n-services/service-caller.service'; //_splitter_
-import { FormControl, Validators, FormBuilder } from '@angular/forms'; //_splitter_
+import {
+  FormGroup,
+  FormControl,
+  Validators,
+  FormBuilder,
+} from '@angular/forms'; //_splitter_
+import { addUserService } from 'app/sd-services/addUserService'; //_splitter_
 //append_imports_end
 
 @Component({
@@ -62,14 +68,97 @@ export class UserCreateComponent {
     }
   }
 
+  initForGroup(...others) {
+    try {
+      var bh: any = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_lfL3gMGxA6OCKKOg(bh);
+      //appendnew_next_initForGroup
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_X4Fr8Uo8ZsHFDqQi');
+    }
+  }
+
+  submitButtonHandler(...others) {
+    try {
+      var bh: any = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.callAddUserService(bh);
+      //appendnew_next_submitButtonHandler
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_mF7cWklndJb2O0A0');
+    }
+  }
+
   //appendnew_flow_UserCreateComponent_start
 
   sd_TO4t94oOl3LTvQbp(bh) {
     try {
+      bh = this.sd_6MrqFCZxFdVUIgBB(bh);
       //appendnew_next_sd_TO4t94oOl3LTvQbp
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_TO4t94oOl3LTvQbp');
+    }
+  }
+
+  sd_6MrqFCZxFdVUIgBB(bh) {
+    try {
+      let outputVariables = this.initForGroup();
+
+      //appendnew_next_sd_6MrqFCZxFdVUIgBB
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_6MrqFCZxFdVUIgBB');
+    }
+  }
+
+  sd_lfL3gMGxA6OCKKOg(bh) {
+    try {
+      this.page.formGroup = FormGroup;
+      this.page.formControl = FormControl;
+      bh = this.sd_arhvWOilcSkvjuiH(bh);
+      //appendnew_next_sd_lfL3gMGxA6OCKKOg
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_lfL3gMGxA6OCKKOg');
+    }
+  }
+
+  sd_arhvWOilcSkvjuiH(bh) {
+    try {
+      const page = this.page;
+      page.userForm = new page.formGroup({
+        name: new page.formControl(''),
+        email: new page.formControl(''),
+        phonenumber: new page.formControl(''),
+      });
+      //appendnew_next_sd_arhvWOilcSkvjuiH
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_arhvWOilcSkvjuiH');
+    }
+  }
+
+  async callAddUserService(bh) {
+    try {
+      const addUserServiceInstance: addUserService =
+        this.__page_injector__.get(addUserService);
+
+      let outputVariables = await addUserServiceInstance.addUser(
+        this.page.userForm.value
+      );
+
+      //appendnew_next_callAddUserService
+      return bh;
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_shLgLmV9lWXuyZHm');
     }
   }
 

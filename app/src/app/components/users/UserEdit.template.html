@@ -1,0 +1,22 @@
+<form>
+  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+      <h2>
+        Add New User</h2>
+      <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+        <input matInput name="name" placeholder="name" [required]="false" formControlName="name">
+        <mat-label>Full Name</mat-label>
+        <mat-icon matSuffix>persion</mat-icon>
+      </mat-form-field>
+      <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+        <input matInput placeholder="Input" [required]="false">
+
+      </mat-form-field>
+      <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+        <input matInput placeholder="Input" [required]="false">
+
+      </mat-form-field>
+      <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><button mat-button>Submit</button></div>
+    </div>
+  </div>
+</form>

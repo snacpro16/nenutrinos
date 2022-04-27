@@ -1,5 +1,5 @@
 {
-    "290959dd-b14a-7406-4157-8a68ab9e989e": {
+    "298309f7-c923-de6a-6313-0f505a59ba04": {
         "paletteKey": "NG-Form",
         "commentid": null,
         "designerReference": [
@@ -51,17 +51,11 @@
                 "_value": "",
                 "_type": "kv",
                 "_attrDef": "p"
-            },
-            {
-                "_key": "[formGroup]",
-                "_value": "page.userForm",
-                "_type": "kv",
-                "_attrDef": "c"
             }
         ],
-        "d3afcb86-1e99-212e-075b-70e6fdcd1e07": {
+        "0d9f5c2f-8713-283b-9e3f-bd965bf5bddf": {
             "paletteKey": "FlexLayoutRow",
-            "parentEditorKey": "290959dd-b14a-7406-4157-8a68ab9e989e",
+            "parentEditorKey": "298309f7-c923-de6a-6313-0f505a59ba04",
             "commentid": null,
             "designerReference": [
                 {
@@ -79,15 +73,13 @@
                 },
                 {
                     "_key": "class",
-                    "_value": [
-                        "mt-2"
-                    ],
+                    "_value": "",
                     "_type": "dav",
                     "_attrDef": "p"
                 },
                 {
                     "_key": "fxFlex",
-                    "_value": "100",
+                    "_value": "",
                     "_type": "kv",
                     "_attrDef": "p"
                 },
@@ -105,7 +97,7 @@
                 },
                 {
                     "_key": "layoutAlign",
-                    "_value": "center",
+                    "_value": "start",
                     "_type": "a",
                     "_attrDef": "p"
                 },
@@ -122,9 +114,9 @@
                     "_attrDef": "p"
                 }
             ],
-            "66694e11-1d90-6d64-66f1-4d7d663a5344": {
+            "26335620-ee1f-0568-2205-f54b65084beb": {
                 "paletteKey": "FlexLayoutCol",
-                "parentEditorKey": "d3afcb86-1e99-212e-075b-70e6fdcd1e07",
+                "parentEditorKey": "0d9f5c2f-8713-283b-9e3f-bd965bf5bddf",
                 "commentid": null,
                 "designerReference": [
                     {
@@ -142,23 +134,19 @@
                     },
                     {
                         "_key": "class",
-                        "_value": [
-                            "mat-elevation-z2",
-                            "page-sapce",
-                            "card-r"
-                        ],
+                        "_value": "",
                         "_type": "dav",
                         "_attrDef": "p"
                     },
                     {
                         "_key": "fxFlex",
-                        "_value": "50",
+                        "_value": "",
                         "_type": "kv",
                         "_attrDef": "p"
                     },
                     {
                         "_key": "fxLayoutGap",
-                        "_value": "10",
+                        "_value": "",
                         "_type": "kv",
                         "_attrDef": "p"
                     },
@@ -187,9 +175,9 @@
                         "_attrDef": "p"
                     }
                 ],
-                "5bd3716d-4ed6-d088-79f5-e05b54fa8f46": {
+                "b0d0ea5c-4052-6955-b3d6-e7a93de56f94": {
                     "paletteKey": "Html5",
-                    "parentEditorKey": "66694e11-1d90-6d64-66f1-4d7d663a5344",
+                    "parentEditorKey": "26335620-ee1f-0568-2205-f54b65084beb",
                     "isAdvancedComponent": true,
                     "commentid": null,
                     "designerReference": [
@@ -374,9 +362,9 @@
                             "_visibility": false
                         }
                     ],
-                    "0dc98ebd-c52b-9282-acf5-77ee6e398f47": {
+                    "e05c4750-451c-1ebb-e26d-d3de4e077483": {
                         "paletteKey": "html-editor",
-                        "parentEditorKey": "5bd3716d-4ed6-d088-79f5-e05b54fa8f46",
+                        "parentEditorKey": "b0d0ea5c-4052-6955-b3d6-e7a93de56f94",
                         "isAdvancedChildComponent": true,
                         "commentid": null,
                         "designerReference": [
@@ -401,9 +389,9 @@
                         ]
                     }
                 },
-                "27585133-95d2-ed75-654a-a220e29cb39e": {
+                "11321be0-2f9c-e8fe-db4b-7e987507cd62": {
                     "paletteKey": "NG-Input",
-                    "parentEditorKey": "66694e11-1d90-6d64-66f1-4d7d663a5344",
+                    "parentEditorKey": "26335620-ee1f-0568-2205-f54b65084beb",
                     "isAdvancedComponent": true,
                     "commentid": null,
                     "designerReference": [
@@ -528,7 +516,7 @@
                         },
                         {
                             "_key": "Suffix Icon",
-                            "_value": "person",
+                            "_value": "persion",
                             "_type": "a",
                             "_attrDef": "p",
                             "_visibility": true
@@ -576,9 +564,9 @@
                         }
                     ]
                 },
-                "4d7b237d-a6e2-6600-dcab-afb6e2f40e71": {
+                "011dd615-e0ba-5179-0e91-d5b003604a78": {
                     "paletteKey": "NG-Input",
-                    "parentEditorKey": "66694e11-1d90-6d64-66f1-4d7d663a5344",
+                    "parentEditorKey": "26335620-ee1f-0568-2205-f54b65084beb",
                     "isAdvancedComponent": true,
                     "commentid": null,
                     "designerReference": [
@@ -596,7 +584,7 @@
                         },
                         {
                             "_key": "placeholder",
-                            "_value": "email",
+                            "_value": "Input",
                             "_type": "kv",
                             "_attrDef": "p",
                             "_useAsLabel": true
@@ -609,13 +597,13 @@
                         },
                         {
                             "_key": "[appearance]",
-                            "_value": "'outline'",
+                            "_value": "'legacy'",
                             "_type": "a",
                             "_attrDef": "p"
                         },
                         {
                             "_key": "[required]",
-                            "_value": "true",
+                            "_value": "false",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
@@ -633,13 +621,13 @@
                         },
                         {
                             "_key": "name",
-                            "_value": "email",
+                            "_value": "",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
                         {
                             "_key": "type",
-                            "_value": "email",
+                            "_value": "",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
@@ -696,14 +684,14 @@
                         },
                         {
                             "_key": "Label",
-                            "_value": "Email",
+                            "_value": "",
                             "_type": "a",
                             "_attrDef": "p",
                             "_visibility": true
                         },
                         {
                             "_key": "Suffix Icon",
-                            "_value": "email",
+                            "_value": "",
                             "_type": "a",
                             "_attrDef": "p",
                             "_visibility": true
@@ -742,18 +730,12 @@
                             "_type": "a",
                             "_attrDef": "p",
                             "_visibility": true
-                        },
-                        {
-                            "_key": "formControlName",
-                            "_value": "email",
-                            "_type": "kv",
-                            "_attrDef": "c"
                         }
                     ]
                 },
-                "e2ecdba2-9cb6-beac-d9d0-29cf165db83e": {
+                "1900e506-772f-dc06-80b9-d4c39c861e27": {
                     "paletteKey": "NG-Input",
-                    "parentEditorKey": "66694e11-1d90-6d64-66f1-4d7d663a5344",
+                    "parentEditorKey": "26335620-ee1f-0568-2205-f54b65084beb",
                     "isAdvancedComponent": true,
                     "commentid": null,
                     "designerReference": [
@@ -771,7 +753,7 @@
                         },
                         {
                             "_key": "placeholder",
-                            "_value": "Phone Number",
+                            "_value": "Input",
                             "_type": "kv",
                             "_attrDef": "p",
                             "_useAsLabel": true
@@ -784,7 +766,7 @@
                         },
                         {
                             "_key": "[appearance]",
-                            "_value": "'outline'",
+                            "_value": "'legacy'",
                             "_type": "a",
                             "_attrDef": "p"
                         },
@@ -802,19 +784,19 @@
                         },
                         {
                             "_key": "color",
-                            "_value": "primary",
+                            "_value": "",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
                         {
                             "_key": "name",
-                            "_value": "phonenmber",
+                            "_value": "",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
                         {
                             "_key": "type",
-                            "_value": "number",
+                            "_value": "",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
@@ -871,14 +853,14 @@
                         },
                         {
                             "_key": "Label",
-                            "_value": "Phone Number",
+                            "_value": "",
                             "_type": "a",
                             "_attrDef": "p",
                             "_visibility": true
                         },
                         {
                             "_key": "Suffix Icon",
-                            "_value": "phone",
+                            "_value": "",
                             "_type": "a",
                             "_attrDef": "p",
                             "_visibility": true
@@ -920,9 +902,9 @@
                         }
                     ]
                 },
-                "150cdd48-6bda-facd-a434-a17453e9eabd": {
+                "67224fbb-2f27-9793-c39a-10b0c8fc264f": {
                     "paletteKey": "FlexLayoutRow",
-                    "parentEditorKey": "66694e11-1d90-6d64-66f1-4d7d663a5344",
+                    "parentEditorKey": "26335620-ee1f-0568-2205-f54b65084beb",
                     "commentid": null,
                     "designerReference": [
                         {
@@ -981,9 +963,9 @@
                             "_attrDef": "p"
                         }
                     ],
-                    "01916642-64ee-1e73-9dd6-b116e89872fc": {
+                    "c4c48c01-eac8-fc46-b594-dcf02bb66ba7": {
                         "paletteKey": "NG-button",
-                        "parentEditorKey": "150cdd48-6bda-facd-a434-a17453e9eabd",
+                        "parentEditorKey": "67224fbb-2f27-9793-c39a-10b0c8fc264f",
                         "commentid": null,
                         "designerReference": [
                             {
@@ -1013,16 +995,9 @@
                             },
                             {
                                 "_key": "(click)",
-                                "_value": "submitButtonHandler()",
+                                "_value": "",
                                 "_type": "kv",
-                                "_attrDef": "p",
-                                "objValue": {
-                                    "nodeID": "sd_mF7cWklndJb2O0A0",
-                                    "functionName": "submitButtonHandler",
-                                    "activeTree": "pages",
-                                    "z": "sd_hc7erzpn8knKcvzj",
-                                    "input": []
-                                }
+                                "_attrDef": "p"
                             },
                             {
                                 "_key": "[disabled]",

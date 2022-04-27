@@ -1,0 +1,144 @@
+[
+    {
+        "id": "sd_JEkCANwkYB5lllGY",
+        "type": "tab",
+        "createdDate": "2022-04-27T14:02:45.805Z",
+        "label": "fetchUsersService",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "fetchUsersService",
+        "relativeParentPath": ""
+    },
+    {
+        "id": "sd_vFcUORTz6FcWNe2n",
+        "type": "Start",
+        "z": "sd_JEkCANwkYB5lllGY",
+        "viewType": "client-server",
+        "nodeType": "start",
+        "name": "Fetch Users List",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [
+            {
+                "key": "users",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": true
+            }
+        ],
+        "accept_bh": false,
+        "functionName": "fetchUsersList",
+        "category": "General",
+        "x": 105,
+        "y": 60,
+        "wires": [
+            [
+                "sd_2ZIrYwjLE8FTZFKZ"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "fetchUsersService"
+    },
+    {
+        "id": "sd_2ZIrYwjLE8FTZFKZ",
+        "type": "Environment",
+        "z": "sd_JEkCANwkYB5lllGY",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "envMaps": [
+            {
+                "flowVar": {
+                    "type": "bh.local",
+                    "value": "baseURL"
+                },
+                "envProperty": "ssdURL"
+            }
+        ],
+        "functionName": "sd_2ZIrYwjLE8FTZFKZ",
+        "category": "General",
+        "x": 205,
+        "y": 60,
+        "wires": [
+            [
+                "sd_FW7rBz8o7ZNbeBIK"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_FW7rBz8o7ZNbeBIK",
+        "type": "Script",
+        "z": "sd_JEkCANwkYB5lllGY",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.local.userURL = bh.local.baseURL + \"users\";",
+        "functionName": "sd_FW7rBz8o7ZNbeBIK",
+        "category": "Function",
+        "x": 345,
+        "y": 60,
+        "wires": [
+            [
+                "sd_ZU15Pojn2Tn1GFmj"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_ZU15Pojn2Tn1GFmj",
+        "type": "HttpRequest",
+        "z": "sd_JEkCANwkYB5lllGY",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "fetch blogs API",
+        "method": "get",
+        "methodMappingObj": {},
+        "urlMapping": "bh.local.userURL",
+        "urlMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "userURL"
+        },
+        "ret": "json",
+        "retMappingObj": {},
+        "observe": "",
+        "observeMappingObj": {},
+        "reportProgress": false,
+        "withCreds": false,
+        "reqBodyObj": {
+            "mapVarType": "bh",
+            "mapVarValue": ""
+        },
+        "resultMapping": "bh.local.users",
+        "resultMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "users"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMappingObj": {},
+        "functionName": "fetchBlogsAPI",
+        "category": "HTTP",
+        "x": 485,
+        "y": 60,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    }
+]

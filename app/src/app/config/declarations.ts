@@ -15,6 +15,10 @@ window['neutrinos'] = {
 };
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-UserRouterComponent
+import { UserRouterComponent } from '../components/users/UserRouter.component';
+//CORE_REFERENCE_IMPORT-UserEditComponent
+import { UserEditComponent } from '../components/users/UserEdit.component';
 //CORE_REFERENCE_IMPORT-UserCreateComponent
 import { UserCreateComponent } from '../components/users/UserCreate.component';
 //CORE_REFERENCE_IMPORT-UserListComponent
@@ -61,6 +65,10 @@ export const appDeclarations = [
   PageNotFoundComponent,
   ArtImgSrcDirective,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-UserRouterComponent
+  UserRouterComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-UserEditComponent
+  UserEditComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-UserCreateComponent
   UserCreateComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-UserListComponent
@@ -103,20 +111,19 @@ export const appRoutes = [
   {
     path: 'home',
     component: homeComponent,
+    canActivate: [NeutrinosAuthGuardService],
     children: [
-      {
-        path: 'list',
-        component: listComponent,
-        canActivate: [NeutrinosAuthGuardService],
-      },
+      { path: 'list', component: listComponent },
       { path: 'detail/:id', component: detailComponent },
       { path: 'create', component: createComponent },
       {
         path: 'users',
-        component: UserListComponent,
+        component: UserRouterComponent,
         children: [
           { path: 'create', component: UserCreateComponent },
           { path: ':id', component: UserDetailComponent },
+          { path: 'edit/:id', component: UserEditComponent },
+          { path: 'list', component: UserListComponent },
         ],
       },
     ],

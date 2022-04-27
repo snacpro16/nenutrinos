@@ -19,8 +19,8 @@
         "name": "",
         "functionName": "sd_GXYakWOQQzhQn3LM",
         "category": "Lifecycle Events",
-        "x": 30,
-        "y": 30,
+        "x": 65,
+        "y": 40,
         "wires": [
             [
                 "sd_TO4t94oOl3LTvQbp"
@@ -43,8 +43,215 @@
         "globalVariables": [],
         "functionName": "sd_TO4t94oOl3LTvQbp",
         "category": "Function",
-        "x": 180,
-        "y": 30,
+        "x": 185,
+        "y": 40,
+        "wires": [
+            [
+                "sd_6MrqFCZxFdVUIgBB"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true,
+        "serviceName": "UserCreateComponent"
+    },
+    {
+        "id": "sd_X4Fr8Uo8ZsHFDqQi",
+        "type": "PageStart",
+        "z": "sd_hc7erzpn8knKcvzj",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "initForGroup",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "initForGroup",
+        "category": "General",
+        "x": 65,
+        "y": 120,
+        "wires": [
+            [
+                "sd_lfL3gMGxA6OCKKOg"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "UserCreateComponent"
+    },
+    {
+        "id": "sd_arhvWOilcSkvjuiH",
+        "type": "Script",
+        "z": "sd_hc7erzpn8knKcvzj",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.userForm = new page.formGroup({\n    \"name\": new page.formControl(\"\"),\n    \"email\": new page.formControl(\"\"),\n    \"phonenumber\": new page.formControl(\"\")\n})",
+        "functionName": "sd_arhvWOilcSkvjuiH",
+        "category": "Function",
+        "x": 305,
+        "y": 120,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_lfL3gMGxA6OCKKOg",
+        "type": "UseDependency",
+        "z": "sd_hc7erzpn8knKcvzj",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "FormGroup",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "formGroup"
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "FormControl",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "formControl"
+                },
+                "injectable": false
+            }
+        ],
+        "import_all": false,
+        "library": "@angular/forms",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_lfL3gMGxA6OCKKOg",
+        "category": "Function",
+        "x": 185,
+        "y": 120,
+        "wires": [
+            [
+                "sd_arhvWOilcSkvjuiH"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_6MrqFCZxFdVUIgBB",
+        "type": "PageCallService",
+        "z": "sd_hc7erzpn8knKcvzj",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_hc7erzpn8knKcvzj",
+            "type": "tab",
+            "createdDate": "2022-04-27T07:28:01.065Z",
+            "label": "UserCreate",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0
+        },
+        "flow": {
+            "flowId": "sd_X4Fr8Uo8ZsHFDqQi",
+            "flowName": "initForGroup"
+        },
+        "inputVariables": [],
+        "outputMapping": [],
+        "serviceImportPath": "./UserCreate",
+        "startName": "initForGroup",
+        "inputParams": [],
+        "accept_csd": false,
+        "functionName": "sd_6MrqFCZxFdVUIgBB",
+        "category": "General",
+        "x": 305,
+        "y": 40,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_mF7cWklndJb2O0A0",
+        "type": "PageStart",
+        "z": "sd_hc7erzpn8knKcvzj",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "Submit Button handler",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "submitButtonHandler",
+        "category": "General",
+        "x": 65,
+        "y": 200,
+        "wires": [
+            [
+                "sd_shLgLmV9lWXuyZHm"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "UserCreateComponent"
+    },
+    {
+        "id": "sd_shLgLmV9lWXuyZHm",
+        "type": "PageCallService",
+        "z": "sd_hc7erzpn8knKcvzj",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "call add user service",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_pjQePRWErRF7JsTJ",
+            "type": "tab",
+            "createdDate": "2022-04-27T14:57:24.851Z",
+            "label": "addUserService",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0
+        },
+        "flow": {
+            "flowId": "sd_pXk46a6W7Lx7lBkH",
+            "flowName": "addUser"
+        },
+        "inputVariables": [
+            {
+                "key": "user",
+                "map": true,
+                "valueType": "this.page",
+                "value": "userForm.value"
+            }
+        ],
+        "outputMapping": [],
+        "serviceImportPath": "app/sd-services/addUserService",
+        "startName": "addUser",
+        "inputParams": [
+            "this.page.userForm.value"
+        ],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "callAddUserService",
+        "category": "General",
+        "x": 225,
+        "y": 200,
         "wires": [
             []
         ],

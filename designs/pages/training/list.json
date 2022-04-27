@@ -184,7 +184,7 @@
         "resultMapping": {},
         "functionName": "saveBlogInSessionstorage",
         "category": "Storage",
-        "x": 185,
+        "x": 205,
         "y": 140,
         "wires": [
             [

@@ -17,10 +17,13 @@
         "viewType": "common",
         "nodeType": "start",
         "name": "",
+        "inputVariables": [],
+        "localVariables": [],
+        "outputVariables": [],
         "functionName": "sd_EgUO7kvIsqD1vHHL",
         "category": "Lifecycle Events",
-        "x": 30,
-        "y": 30,
+        "x": 105,
+        "y": 80,
         "wires": [
             [
                 "sd_RFarR1l7sjJtZtTk"
@@ -43,8 +46,209 @@
         "globalVariables": [],
         "functionName": "sd_RFarR1l7sjJtZtTk",
         "category": "Function",
-        "x": 180,
-        "y": 30,
+        "x": 245,
+        "y": 80,
+        "wires": [
+            [
+                "sd_i1ryWaWWgR2AdLtS"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true,
+        "serviceName": "UserListComponent"
+    },
+    {
+        "id": "sd_i1ryWaWWgR2AdLtS",
+        "type": "PageCallService",
+        "z": "sd_2juzzECcG35Oye3E",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "call user service",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_JEkCANwkYB5lllGY",
+            "type": "tab",
+            "createdDate": "2022-04-27T14:02:45.805Z",
+            "label": "fetchUsersService",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0
+        },
+        "flow": {
+            "flowId": "sd_vFcUORTz6FcWNe2n",
+            "flowName": "fetchUsersList"
+        },
+        "inputVariables": [],
+        "outputMapping": [
+            {
+                "mapVarType": "local",
+                "key": "users",
+                "valueType": "this.page",
+                "value": "users",
+                "mapVarName": "users",
+                "localVar": "this.page.users"
+            }
+        ],
+        "serviceImportPath": "app/sd-services/fetchUsersService",
+        "startName": "fetchUsersList",
+        "inputParams": [],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "callUserService",
+        "category": "General",
+        "x": 345,
+        "y": 80,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true,
+        "serviceName": "UserListComponent"
+    },
+    {
+        "id": "sd_1bK6TThMHAizDsOM",
+        "type": "PageStart",
+        "z": "sd_2juzzECcG35Oye3E",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "Add User Navigate",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "addUserNavigate",
+        "category": "General",
+        "x": 105,
+        "y": 180,
+        "wires": [
+            [
+                "sd_N3BOdVkgWvjxs4wj"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "UserListComponent"
+    },
+    {
+        "id": "sd_N3BOdVkgWvjxs4wj",
+        "type": "Navigation",
+        "z": "sd_2juzzECcG35Oye3E",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "createNav",
+        "path": "/home/users/create",
+        "functionName": "createNav",
+        "category": "Navigation",
+        "x": 240,
+        "y": 180,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_MtD2eMnhv0nLTPxT",
+        "type": "PageStart",
+        "z": "sd_2juzzECcG35Oye3E",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "User Detail Navigate",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "userDetailNavigate",
+        "category": "General",
+        "x": 108,
+        "y": 281.8125,
+        "wires": [
+            [
+                "sd_OF2OpKEhzABGGEqS"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "UserListComponent"
+    },
+    {
+        "id": "sd_OF2OpKEhzABGGEqS",
+        "type": "Navigation",
+        "z": "sd_2juzzECcG35Oye3E",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "detailsNav",
+        "path": "/home/users/:id",
+        "pathparams": [
+            {
+                "paramKey": "id",
+                "paramValue": {
+                    "type": "str",
+                    "value": ""
+                }
+            }
+        ],
+        "functionName": "detailsNav",
+        "category": "Navigation",
+        "x": 243,
+        "y": 281.8125,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_jhzxlVcDo3UJ3Hi1",
+        "type": "PageStart",
+        "z": "sd_2juzzECcG35Oye3E",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "Edit User Navigate",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "editUserNavigate",
+        "category": "General",
+        "x": 105,
+        "y": 380,
+        "wires": [
+            [
+                "sd_UfJ83QMaQWm7iyAb"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "UserListComponent"
+    },
+    {
+        "id": "sd_UfJ83QMaQWm7iyAb",
+        "type": "Navigation",
+        "z": "sd_2juzzECcG35Oye3E",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "editNav",
+        "path": "/home/users/edit/:id",
+        "pathparams": [
+            {
+                "paramKey": "id",
+                "paramValue": {
+                    "type": "str",
+                    "value": ""
+                }
+            }
+        ],
+        "functionName": "editNav",
+        "category": "Navigation",
+        "x": 245,
+        "y": 380,
         "wires": [
             []
         ],

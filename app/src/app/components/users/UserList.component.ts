@@ -12,6 +12,10 @@ import {
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { __NEU_ServiceInvokerService__ } from 'app/n-services/service-caller.service'; //_splitter_
+import { fetchUsersService } from 'app/sd-services/fetchUsersService'; //_splitter_
+import { Router } from '@angular/router'; //_splitter_
+import { MatSort, SortDirection } from '@angular/material/sort'; //_splitter_
+import { MatTableDataSource } from '@angular/material/table'; //_splitter_
 //append_imports_end
 
 @Component({
@@ -60,14 +64,114 @@ export class UserListComponent {
     }
   }
 
+  addUserNavigate(...others) {
+    try {
+      var bh: any = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.createNav(bh);
+      //appendnew_next_addUserNavigate
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_1bK6TThMHAizDsOM');
+    }
+  }
+
+  userDetailNavigate(...others) {
+    try {
+      var bh: any = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.detailsNav(bh);
+      //appendnew_next_userDetailNavigate
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_MtD2eMnhv0nLTPxT');
+    }
+  }
+
+  editUserNavigate(...others) {
+    try {
+      var bh: any = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.editNav(bh);
+      //appendnew_next_editUserNavigate
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_jhzxlVcDo3UJ3Hi1');
+    }
+  }
+
   //appendnew_flow_UserListComponent_start
 
   sd_RFarR1l7sjJtZtTk(bh) {
     try {
+      bh = this.callUserService(bh);
       //appendnew_next_sd_RFarR1l7sjJtZtTk
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_RFarR1l7sjJtZtTk');
+    }
+  }
+
+  async callUserService(bh) {
+    try {
+      const fetchUsersServiceInstance: fetchUsersService =
+        this.__page_injector__.get(fetchUsersService);
+
+      let outputVariables = await fetchUsersServiceInstance.fetchUsersList();
+      this.page.users = outputVariables.local.users;
+
+      //appendnew_next_callUserService
+      return bh;
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_i1ryWaWWgR2AdLtS');
+    }
+  }
+
+  async createNav(bh) {
+    try {
+      const { paramObj: qprm, path: path } =
+        this.sdService.getPathAndQParamsObj('/home/users/create');
+      await this.__page_injector__
+        .get(Router)
+        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+      //appendnew_next_createNav
+      return bh;
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_N3BOdVkgWvjxs4wj');
+    }
+  }
+
+  async detailsNav(bh) {
+    try {
+      const { paramObj: qprm, path: path } =
+        this.sdService.getPathAndQParamsObj('/home/users/:id');
+      await this.__page_injector__
+        .get(Router)
+        .navigate([this.sdService.formatPathWithParams(path, { id: '' })]);
+      //appendnew_next_detailsNav
+      return bh;
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_OF2OpKEhzABGGEqS');
+    }
+  }
+
+  async editNav(bh) {
+    try {
+      const { paramObj: qprm, path: path } =
+        this.sdService.getPathAndQParamsObj('/home/users/edit/:id');
+      await this.__page_injector__
+        .get(Router)
+        .navigate([this.sdService.formatPathWithParams(path, { id: '' })]);
+      //appendnew_next_editNav
+      return bh;
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_UfJ83QMaQWm7iyAb');
     }
   }
 

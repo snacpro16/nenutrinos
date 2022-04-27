@@ -1,22 +1,24 @@
-<form>
-  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
-    <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+<form [formGroup]="page.userForm">
+  <div fxLayout="row wrap" class="mt-2" fxFlex="100" fxLayoutAlign="center stretch" [fxShow]="true">
+    <div fxLayout="column wrap" class="mat-elevation-z2 page-sapce card-r" fxFlex="50" fxLayoutGap="10" fxLayoutAlign="start stretch" [fxShow]="true">
       <h2>
         Add New User</h2>
       <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
         <input matInput name="name" placeholder="name" [required]="false" formControlName="name">
         <mat-label>Full Name</mat-label>
-        <mat-icon matSuffix>persion</mat-icon>
+        <mat-icon matSuffix>person</mat-icon>
       </mat-form-field>
-      <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-        <input matInput placeholder="Input" [required]="false">
-
+      <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+        <input matInput name="email" type="email" placeholder="email" [required]="true" formControlName="email">
+        <mat-label>Email</mat-label>
+        <mat-icon matSuffix>email</mat-icon>
       </mat-form-field>
-      <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-        <input matInput placeholder="Input" [required]="false">
-
+      <mat-form-field color="primary" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+        <input matInput name="phonenmber" type="number" placeholder="Phone Number" [required]="false">
+        <mat-label>Phone Number</mat-label>
+        <mat-icon matSuffix>phone</mat-icon>
       </mat-form-field>
-      <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><button mat-button>Submit</button></div>
+      <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><button mat-button (click)="submitButtonHandler()">Submit</button></div>
     </div>
   </div>
 </form>
