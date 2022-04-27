@@ -3,6 +3,8 @@
         "button-style",
         "page-sapce",
         "mt-2",
-        "card-r"
+        "card-r",
+        "alert-red",
+        "layout"
     ]
 }

@@ -137,6 +137,21 @@ export class addBlogservice {
     }
   }
 
+  async sd_JhK4MBJUgdBH8x4x(bh) {
+    try {
+      this.matSnackBar.open(bh.error.error.message, 'close', {
+        duration: 3000,
+        direction: 'ltr',
+        horizontalPosition: 'right',
+        verticalPosition: 'top',
+      });
+      //appendnew_next_sd_JhK4MBJUgdBH8x4x
+      return bh;
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_JhK4MBJUgdBH8x4x');
+    }
+  }
+
   //appendnew_node
 
   private async errorHandler(bh, e, src) {
@@ -145,13 +160,23 @@ export class addBlogservice {
     bh.errorSource = src;
 
     if (
-      false
+      false ||
+      (await this.sd_r5ksuAhTJugTspwC(bh))
       /*appendnew_next_Catch*/
     ) {
       return bh;
     } else {
       throw e;
     }
+  }
+  async sd_r5ksuAhTJugTspwC(bh) {
+    const nodes = ['sd_F4wvz9jM7izEWaMB'];
+    if (nodes.includes(bh.errorSource)) {
+      bh = await this.sd_JhK4MBJUgdBH8x4x(bh);
+      //appendnew_next_sd_r5ksuAhTJugTspwC
+      return true;
+    }
+    return false;
   }
   //appendnew_flow_addBlogservice_Catch
 }

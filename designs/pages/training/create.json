@@ -134,6 +134,7 @@
         "serviceImportPath": "./create",
         "startName": "initForGroup",
         "inputParams": [],
+        "accept_bh": false,
         "accept_csd": false,
         "functionName": "sd_urDKA25leer1zFxh",
         "category": "General",

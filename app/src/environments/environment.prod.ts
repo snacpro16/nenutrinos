@@ -7,7 +7,7 @@ export const environment = {
         "appName": "frontend",
         "namespace": "com.neutrinos-training.frontend",
         "googleMapKey": "AIzaSyCSTnVwijjv0CFRA4MEeS-H6PAQc87LEoU",
-        "useDefaultExceptionUI": true,
+        "useDefaultExceptionUI": "",
         "isIDSEnabled": "false",
         "webAppMountpoint": "web",
         "NGFORAGE_MOBILE_DRIVER": "INDEXED_DB"

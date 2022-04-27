@@ -104,6 +104,25 @@ export class fetchBlogsService {
     }
   }
 
+  async alert(bh) {
+    try {
+      this.matSnackBar.open(bh.error.error.message, 'Close', {
+        duration: 3000,
+        direction: 'ltr',
+        horizontalPosition: 'right',
+        verticalPosition: 'top',
+        panelClass: 'alert-red'
+          .split(',')
+          .map((v: string) => v.trim())
+          .filter(Boolean),
+      });
+      //appendnew_next_alert
+      return bh;
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_N4BiuN8VDJBoqIjp');
+    }
+  }
+
   //appendnew_node
 
   private async errorHandler(bh, e, src) {
@@ -112,13 +131,23 @@ export class fetchBlogsService {
     bh.errorSource = src;
 
     if (
-      false
+      false ||
+      (await this.sd_FL88806byP5N0WFz(bh))
       /*appendnew_next_Catch*/
     ) {
       return bh;
     } else {
       throw e;
     }
+  }
+  async sd_FL88806byP5N0WFz(bh) {
+    const nodes = ['sd_xjZYMy9Z1BpyJpHz'];
+    if (nodes.includes(bh.errorSource)) {
+      bh = await this.alert(bh);
+      //appendnew_next_sd_FL88806byP5N0WFz
+      return true;
+    }
+    return false;
   }
   //appendnew_flow_fetchBlogsService_Catch
 }
