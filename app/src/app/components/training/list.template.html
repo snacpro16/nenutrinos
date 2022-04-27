@@ -1,5 +1,5 @@
 <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true">
-  <div fxLayout="column wrap" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true">
+  <div fxLayout="column wrap" class="center" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true" *ngIf="!page.blogs">
     <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="center center" [fxShow]="true">
       <mat-progress-spinner class="layout mat-progress-spinner" [mode]="&apos;indeterminate&apos;" color="primary"></mat-progress-spinner>
     </div>

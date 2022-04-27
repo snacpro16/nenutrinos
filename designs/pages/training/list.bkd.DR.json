@@ -79,7 +79,9 @@
                 },
                 {
                     "_key": "class",
-                    "_value": [],
+                    "_value": [
+                        "center"
+                    ],
                     "_type": "dav",
                     "_attrDef": "p"
                 },
@@ -118,6 +120,12 @@
                     "_value": "true",
                     "_type": "kv",
                     "_attrDef": "p"
+                },
+                {
+                    "_key": "*ngIf",
+                    "_value": "!page.blogs",
+                    "_type": "kv",
+                    "_attrDef": "c"
                 }
             ],
             "b5f69e11-3b36-efde-dac6-7a6e45bbec6e": {
@@ -306,7 +314,6 @@
             "3a5a4417-7f03-03d7-eadb-6153103eb823": {
                 "paletteKey": "FlexLayoutRow",
                 "parentEditorKey": "41d8db3c-b09f-9b2f-69e0-a6c5ac62f847",
-                "isCommented": "false",
                 "commentid": null,
                 "designerReference": [
                     {
@@ -368,7 +375,6 @@
                 "1673010d-f3a7-e239-79b8-4ec1b3c4342a": {
                     "paletteKey": "FlexLayoutCol",
                     "parentEditorKey": "3a5a4417-7f03-03d7-eadb-6153103eb823",
-                    "isCommented": "false",
                     "commentid": null,
                     "designerReference": [
                         {
@@ -455,7 +461,6 @@
                         "paletteKey": "ad-card",
                         "parentEditorKey": "1673010d-f3a7-e239-79b8-4ec1b3c4342a",
                         "isAdvancedComponent": true,
-                        "isCommented": "false",
                         "commentid": null,
                         "designerReference": [
                             {
@@ -503,7 +508,6 @@
                             "paletteKey": "ng-cardheader",
                             "parentEditorKey": "6585338d-2cbb-339c-ecea-b0f321c08607",
                             "isAdvancedChildComponent": true,
-                            "isCommented": "false",
                             "commentid": null,
                             "designerReference": [
                                 {

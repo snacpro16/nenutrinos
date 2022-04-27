@@ -6,6 +6,7 @@
         "card-r",
         "alert-red",
         "layout",
-        "hide"
+        "hide",
+        "center"
     ]
 }

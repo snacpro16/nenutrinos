@@ -239,5 +239,48 @@
         "__n_excludedFromValidation__": {},
         "generateNext": false,
         "generated": true
+    },
+    {
+        "id": "sd_47FmpZx1NdWtRiPh",
+        "type": "PageStart",
+        "z": "sd_emtflJ50diIuYlNe",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "Logout",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "logout",
+        "category": "General",
+        "x": 105,
+        "y": 580,
+        "wires": [
+            [
+                "sd_g3GujIj5RJsPgGmi"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "homeComponent"
+    },
+    {
+        "id": "sd_g3GujIj5RJsPgGmi",
+        "type": "Script",
+        "z": "sd_emtflJ50diIuYlNe",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.system.oauthService.logout();",
+        "functionName": "sd_g3GujIj5RJsPgGmi",
+        "category": "Function",
+        "x": 265,
+        "y": 580,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
     }
 ]

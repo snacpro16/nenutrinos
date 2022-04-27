@@ -1,3 +1,6 @@
-<mat-toolbar color="primary">Neutrinos Training<div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="end stretch" [fxShow]="true"><button mat-button (click)="listPage()">Blogs</button><button mat-button (click)="createPage()">Add New</button><button mat-button (click)="loginFlow()">Login</button></div>
+<mat-toolbar color="primary">Neutrinos Training<div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="end stretch" [fxShow]="true"><button mat-button (click)="listPage()">Blogs</button><button mat-button (click)="createPage()">Add New</button>
+    <h5 *ngIf="page.system.oauthService.isLoggedIn">
+      Welcome {{page.system.oauthService.userInfo.firstName}}</h5><button mat-button *ngIf="!page.system.oauthService.isLoggedIn" (click)="loginFlow()">Login</button><button mat-button *ngIf="page.system.oauthService.isLoggedIn;" (click)="logout()">Logout</button>
+  </div>
 </mat-toolbar>
 <router-outlet></router-outlet>
