@@ -3,7 +3,7 @@
     "version": 1,
     "newProjectRoot": "projects",
     "projects": {
-        "neutrinostraining": {
+        "frontend": {
             "root": "",
             "sourceRoot": "src",
             "projectType": "application",
@@ -70,18 +70,18 @@
                 "serve": {
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "options": {
-                        "browserTarget": "neutrinostraining:build"
+                        "browserTarget": "frontend:build"
                     },
                     "configurations": {
                         "prod": {
-                            "browserTarget": "neutrinostraining:build:prod"
+                            "browserTarget": "frontend:build:prod"
                         }
                     }
                 },
                 "extract-i18n": {
                     "builder": "@angular-devkit/build-angular:extract-i18n",
                     "options": {
-                        "browserTarget": "neutrinostraining:build"
+                        "browserTarget": "frontend:build"
                     }
                 },
                 "test": {
@@ -122,7 +122,7 @@
                 }
             }
         },
-        "neutrinostraining-e2e": {
+        "frontend-e2e": {
             "root": "e2e/",
             "projectType": "application",
             "architect": {
@@ -130,7 +130,7 @@
                     "builder": "@angular-devkit/build-angular:protractor",
                     "options": {
                         "protractorConfig": "e2e/protractor.conf.js",
-                        "devServerTarget": "neutrinostraining:serve"
+                        "devServerTarget": "frontend:serve"
                     },
                     "configurations": {
                         "prod": {
@@ -150,7 +150,7 @@
             }
         }
     },
-    "defaultProject": "neutrinostraining",
+    "defaultProject": "frontend",
     "schematics": {
         "@schematics/angular:component": {
             "prefix": "app",

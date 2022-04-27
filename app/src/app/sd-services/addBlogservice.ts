@@ -95,7 +95,7 @@ export class addBlogservice {
         params: {},
         body: bh.input.blog,
       };
-      bh.local.blog = await this.sdService.nHttpRequest(requestOptions);
+      bh.local.resp = await this.sdService.nHttpRequest(requestOptions);
       bh = await this.sd_xzaLvCrwe3DpeXbc(bh);
       //appendnew_next_addBlogAPI
       return bh;
@@ -108,13 +108,32 @@ export class addBlogservice {
     try {
       const { paramObj: qprm, path: path } =
         this.sdService.getPathAndQParamsObj('/home/list');
-      await this.router.navigate([
-        this.sdService.formatPathWithParams(path, undefined),
-      ]);
+      await this.router.navigate(
+        [this.sdService.formatPathWithParams(path, undefined)],
+        {
+          queryParams: Object.assign(qprm, ''),
+        }
+      );
+      bh = await this.alert(bh);
       //appendnew_next_sd_xzaLvCrwe3DpeXbc
       return bh;
     } catch (e) {
       return await this.errorHandler(bh, e, 'sd_xzaLvCrwe3DpeXbc');
+    }
+  }
+
+  async alert(bh) {
+    try {
+      this.matSnackBar.open(bh.local.resp.message, 'Ok', {
+        duration: 3000,
+        direction: 'ltr',
+        horizontalPosition: 'right',
+        verticalPosition: 'top',
+      });
+      //appendnew_next_alert
+      return bh;
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_xvEqaQ5kNWj16BLd');
     }
   }
 
