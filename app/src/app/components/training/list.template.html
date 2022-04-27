@@ -1,14 +1,20 @@
-<div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="center center" [fxShow]="true">
-  <mat-progress-spinner class="layout mat-progress-spinner" [mode]="&apos;indeterminate&apos;" color="primary"></mat-progress-spinner>
-</div>
-<div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="space-between stretch" [fxShow]="true">
-  <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" *ngFor="let blog of page.blogs" fxFlex.xs="100" fxFlex.sm="50" fxFlex.gt-sm="50">
-    <mat-card (click)="navigateToDetailPage(blog)" style="margin:15px;">
-      <mat-card-header>
-        <mat-card-title>{{blog.id}} {{blog.title}} </mat-card-title>
-        <mat-card-subtitle>{{blog.description}}</mat-card-subtitle>
-        <img mat-card-avatar artImgSrc [src]="blog.image">
-      </mat-card-header>
-    </mat-card>
+<div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true">
+  <div fxLayout="column wrap" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true">
+    <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="center center" [fxShow]="true">
+      <mat-progress-spinner class="layout mat-progress-spinner" [mode]="&apos;indeterminate&apos;" color="primary"></mat-progress-spinner>
+    </div>
+  </div>
+  <div fxLayout="column wrap" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true">
+    <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="space-between stretch" [fxShow]="true">
+      <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" *ngFor="let blog of page.blogs" fxFlex.xs="100" fxFlex.sm="50" fxFlex.gt-sm="50">
+        <mat-card (click)="navigateToDetailPage(blog)" style="margin:15px;">
+          <mat-card-header>
+            <mat-card-title>{{blog.id}} {{blog.title}} </mat-card-title>
+            <mat-card-subtitle>{{blog.description}}</mat-card-subtitle>
+            <img mat-card-avatar artImgSrc [src]="blog.image">
+          </mat-card-header>
+        </mat-card>
+      </div>
+    </div>
   </div>
 </div>

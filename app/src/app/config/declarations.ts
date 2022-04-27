@@ -15,6 +15,12 @@ window['neutrinos'] = {
 };
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-UserCreateComponent
+import { UserCreateComponent } from '../components/users/UserCreate.component';
+//CORE_REFERENCE_IMPORT-UserListComponent
+import { UserListComponent } from '../components/users/UserList.component';
+//CORE_REFERENCE_IMPORT-UserDetailComponent
+import { UserDetailComponent } from '../components/users/UserDetail.component';
 //CORE_REFERENCE_IMPORT-createComponent
 import { createComponent } from '../components/training/create.component';
 //CORE_REFERENCE_IMPORT-detailComponent
@@ -55,6 +61,12 @@ export const appDeclarations = [
   PageNotFoundComponent,
   ArtImgSrcDirective,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-UserCreateComponent
+  UserCreateComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-UserListComponent
+  UserListComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-UserDetailComponent
+  UserDetailComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-createComponent
   createComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-detailComponent
@@ -95,6 +107,14 @@ export const appRoutes = [
       { path: 'list', component: listComponent },
       { path: 'detail/:id', component: detailComponent },
       { path: 'create', component: createComponent },
+      {
+        path: 'users',
+        component: UserListComponent,
+        children: [
+          { path: 'create', component: UserCreateComponent },
+          { path: ':id', component: UserDetailComponent },
+        ],
+      },
     ],
   },
   { path: '', redirectTo: 'home/list', pathMatch: 'full' },

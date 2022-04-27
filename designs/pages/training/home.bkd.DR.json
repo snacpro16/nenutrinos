@@ -165,7 +165,7 @@
                     }
                 ]
             },
-            "4daefdc6-baac-716d-78ba-fb077c5b0b59": {
+            "f2a1d370-6bde-dda8-4499-4ffb8e2507a5": {
                 "paletteKey": "NG-button",
                 "parentEditorKey": "517f790c-70f3-957d-bee8-a7cd19de31ca",
                 "commentid": null,
@@ -203,6 +203,75 @@
                         "objValue": {
                             "nodeID": "sd_tqHg3tZAEYkl7Tp1",
                             "functionName": "createPage",
+                            "activeTree": "pages",
+                            "z": "sd_emtflJ50diIuYlNe",
+                            "input": []
+                        }
+                    },
+                    {
+                        "_key": "[disabled]",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "[disableRipple]",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "type",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "routerLink",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    }
+                ]
+            },
+            "4daefdc6-baac-716d-78ba-fb077c5b0b59": {
+                "paletteKey": "NG-button",
+                "parentEditorKey": "517f790c-70f3-957d-bee8-a7cd19de31ca",
+                "commentid": null,
+                "designerReference": [
+                    {
+                        "_key": "style",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "class",
+                        "_value": "",
+                        "_type": "dav",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "buttonname",
+                        "_value": "Login",
+                        "_type": "a",
+                        "_attrDef": "p",
+                        "_useAsLabel": true
+                    },
+                    {
+                        "_key": "color",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "(click)",
+                        "_value": "loginFlow()",
+                        "_type": "kv",
+                        "_attrDef": "p",
+                        "objValue": {
+                            "nodeID": "sd_ZNnzLP9zxRzyRMHm",
+                            "functionName": "loginFlow",
                             "activeTree": "pages",
                             "z": "sd_emtflJ50diIuYlNe",
                             "input": []

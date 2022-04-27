@@ -15,6 +15,20 @@
                 {
                     "path": "create",
                     "component": "createComponent"
+                },
+                {
+                    "path": "users",
+                    "component": "UserListComponent",
+                    "children": [
+                        {
+                            "path": "create",
+                            "component": "UserCreateComponent"
+                        },
+                        {
+                            "path": ":id",
+                            "component": "UserDetailComponent"
+                        }
+                    ]
                 }
             ]
         },

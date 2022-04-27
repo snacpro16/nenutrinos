@@ -94,7 +94,8 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
-        "generated": true
+        "generated": true,
+        "serviceName": "homeComponent"
     },
     {
         "id": "sd_tqHg3tZAEYkl7Tp1",
@@ -152,6 +153,13 @@
         "nodeType": "flow",
         "name": "",
         "path": "/home/list",
+        "pathMap": "",
+        "pathparams": "",
+        "pathparamsMap": "",
+        "qparams": "",
+        "qparamsMap": "",
+        "qparamsArray": "",
+        "resultMapping": "",
         "functionName": "sd_Dhnk8NRSkBKFuVk3",
         "category": "Navigation",
         "x": 245,
@@ -171,10 +179,60 @@
         "nodeType": "flow",
         "name": "",
         "path": "/home/create",
+        "pathMap": "",
+        "pathparams": "",
+        "pathparamsMap": "",
+        "qparams": "",
+        "qparamsMap": "",
+        "qparamsArray": "",
+        "resultMapping": "",
         "functionName": "sd_NXVJnQpSDdsrN9tv",
         "category": "Navigation",
         "x": 245,
         "y": 340,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_ZNnzLP9zxRzyRMHm",
+        "type": "PageStart",
+        "z": "sd_emtflJ50diIuYlNe",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "LoginFlow",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "loginFlow",
+        "category": "General",
+        "x": 100,
+        "y": 500,
+        "wires": [
+            [
+                "sd_10Pbdtuv1MB8osb6"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "homeComponent"
+    },
+    {
+        "id": "sd_10Pbdtuv1MB8osb6",
+        "type": "Script",
+        "z": "sd_emtflJ50diIuYlNe",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.system.oauthService.login();",
+        "functionName": "sd_10Pbdtuv1MB8osb6",
+        "category": "Function",
+        "x": 260,
+        "y": 500,
         "wires": [
             []
         ],

@@ -5,6 +5,7 @@
         "mt-2",
         "card-r",
         "alert-red",
-        "layout"
+        "layout",
+        "hide"
     ]
 }
