@@ -104,7 +104,11 @@ export const appRoutes = [
     path: 'home',
     component: homeComponent,
     children: [
-      { path: 'list', component: listComponent },
+      {
+        path: 'list',
+        component: listComponent,
+        canActivate: [NeutrinosAuthGuardService],
+      },
       { path: 'detail/:id', component: detailComponent },
       { path: 'create', component: createComponent },
       {

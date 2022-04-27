@@ -6,7 +6,8 @@
             "children": [
                 {
                     "path": "list",
-                    "component": "listComponent"
+                    "component": "listComponent",
+                    "canActivate": "NeutrinosAuthGuardService"
                 },
                 {
                     "path": "detail/:id",
